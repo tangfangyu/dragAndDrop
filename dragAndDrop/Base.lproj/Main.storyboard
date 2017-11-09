@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="屏幕快照" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-mm-xDE">
+                                <rect key="frame" x="67" y="63" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="I2c-NK-evz"/>
+                                    <constraint firstAttribute="height" constant="128" id="Jsz-fF-Gqe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Wo-O9-1YY">
+                                <rect key="frame" x="67" y="447" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Rbu-gH-Ea9"/>
+                                    <constraint firstAttribute="height" constant="128" id="xUR-JL-het"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNo-qX-2ma">
+                                <rect key="frame" x="87" y="402" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="7Py-JF-i6y"/>
+                                    <constraint firstAttribute="height" constant="21" id="c7n-31-Kb5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Wo-O9-1YY" secondAttribute="bottom" constant="92" id="4Zp-RH-KDI"/>
+                            <constraint firstItem="Zt1-mm-xDE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="7Yx-IW-tWb"/>
+                            <constraint firstItem="8Wo-O9-1YY" firstAttribute="top" secondItem="CNo-qX-2ma" secondAttribute="bottom" constant="24" id="9hj-o9-Qr8"/>
+                            <constraint firstItem="Zt1-mm-xDE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NhM-No-acl"/>
+                            <constraint firstItem="CNo-qX-2ma" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Srt-ld-1bm"/>
+                            <constraint firstItem="8Wo-O9-1YY" firstAttribute="top" secondItem="CNo-qX-2ma" secondAttribute="bottom" constant="24" id="Vze-46-nNV"/>
+                            <constraint firstItem="CNo-qX-2ma" firstAttribute="top" secondItem="Zt1-mm-xDE" secondAttribute="bottom" constant="211" id="jjv-CL-4XL"/>
+                            <constraint firstItem="8Wo-O9-1YY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tEk-WP-XW6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dragImg" destination="Zt1-mm-xDE" id="T5U-Pl-1BN"/>
+                        <outlet property="drogImg" destination="8Wo-O9-1YY" id="acF-6K-aH6"/>
+                        <outlet property="drogLabel" destination="CNo-qX-2ma" id="RmO-ug-wvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="屏幕快照" width="586" height="350"/>
+    </resources>
 </document>
